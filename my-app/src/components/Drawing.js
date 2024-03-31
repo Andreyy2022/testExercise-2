@@ -28,7 +28,7 @@ function Drawing() {
         y2 = 400 + r2 * Math.cos(i);
         arr2.push(<>
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={10} /*style={styleCyrc}*/  />
-            <text className={'textOut' + j2} x={x2 + 50 } y={y2 + 50 }>text</text>    
+            <text className={'textOut' + j2} x={x2 + 50 * Math.sin(i) } y={y2 + 50 * Math.cos(i) }>text</text>    
         </>
         );
     }
