@@ -14,7 +14,7 @@ function Drawing() {
         j1++;
         x1 = 700 + r1 * Math.sin(i);
         y1 = 400 + r1 * Math.cos(i);
-        arr1.push(<circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={10} style={styleCyrc}  />);
+        arr1.push(<circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={10} /*style={styleCyrc}*/  />);
     }
 
     const r2 = 300; 
@@ -26,7 +26,11 @@ function Drawing() {
         j2++;
         x2 = 700 + r2 * Math.sin(i);
         y2 = 400 + r2 * Math.cos(i);
-        arr2.push(<circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={10} style={styleCyrc}  />);
+        arr2.push(<>
+            <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={10} /*style={styleCyrc}*/  />
+            <text className={'textOut' + j2} x={x2 + 50 } y={y2 + 50 }>text</text>    
+        </>
+        );
     }
 
     return (
