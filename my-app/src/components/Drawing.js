@@ -1,5 +1,5 @@
 
-function Drawing() {
+function Drawing({nameSkills}) {
     const styleCirc = {
         fill: 'transparent',
         stroke: "grey", 
@@ -14,13 +14,13 @@ function Drawing() {
     let x1, y1;
     const arr1 = [];
     let j1 = 0;
-    for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints1){
+    for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints1) {
         j1++;
         x1 = 700 + r1 * Math.sin(i);
         y1 = 400 + r1 * Math.cos(i);
         arr1.push(<>
-            <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' />
-            <text className={'textOut' + j1} x={x1 + 60 * Math.sin(i) } y={y1 + 60 * Math.cos(i) }>text</text>  
+            <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' fill-opacity='0.7' />
+            <text className={'textOut' + j1} x={x1 + 60 * Math.sin(i)} y={y1 + 60 * Math.cos(i)}>text</text>  
         </>);
     }
 
@@ -29,13 +29,13 @@ function Drawing() {
     let x2, y2;
     const arr2 = [];
     let j2 = 0;
-    for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints2){
+    for(let i = 0; i < Math.PI * 2; i += Math.PI * 2 / amountOfPoints2) {
         j2++;
         x2 = 700 + r2 * Math.sin(i);
         y2 = 400 + r2 * Math.cos(i);
         arr2.push(<>
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={13} fill='orange' fill-opacity='0.6' />
-            <text className={'textOut' + j2} x={x2 + 50 * Math.sin(i) } y={y2 + 50 * Math.cos(i) }>text</text>    
+            <text className={'textOut' + j2} x={x2 + 50 * Math.sin(i)} y={y2 + 50 * Math.cos(i)}>text</text>    
         </>
         );
     }
@@ -43,9 +43,9 @@ function Drawing() {
     return (
         <div>
             <svg viewBox='0 0 1100 1100' width='1100' heigth='1100' >
-                <circle className='circle1' cx={700} cy={400} r={150} stroke-width="3" stroke-opacity='0.6' style={styleCirc}  />
+                <circle className='circle1' cx={700} cy={400} r={150} stroke-width="3" stroke-opacity='0.6' style={styleCirc} />
                 {arr1}
-                <circle  className='circle2' cx={700} cy={400} r={300} stroke-width="3" stroke-opacity='0.6' style={styleCirc}  />
+                <circle  className='circle2' cx={700} cy={400} r={300} stroke-width="3" stroke-opacity='0.6' style={styleCirc} />
                 {arr2}
             </svg>
         </div>
