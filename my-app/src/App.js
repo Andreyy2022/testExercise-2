@@ -97,7 +97,7 @@ const nameSkills = [
     ],
     otherSkills: ["Figma", "Sketch", "Shopify"],
   },
-]
+];
 
 function App() {
   return (
