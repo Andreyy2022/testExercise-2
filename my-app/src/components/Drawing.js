@@ -5,7 +5,7 @@ function Drawing({nameSkills}) {
         stroke: "grey", 
     }
 
-    const r1 = 150; 
+    const r1 = 140; 
     const amountOfPoints1 = 10; 
     let x1, y1;
     const arr1 = [];
@@ -18,11 +18,11 @@ function Drawing({nameSkills}) {
         y1 = 400 + r1 * Math.cos(i);
         arr1.push(<>
             <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' fillOpacity='0.7' />
-            <text className={'textOut' + j1} x={x1 + 60 * Math.sin(i)} y={y1 + 60 * Math.cos(i)}>{nameSkills[k1].name}</text>
+            <text className={'textOut' + j1} x={x1 + 45 * Math.sin(i)} y={y1 + 45 * Math.cos(i)}>{nameSkills[k1].name}</text>
         </>);
     }
 
-    const r2 = 300; 
+    const r2 = 285; 
     const amountOfPoints2 = 29; 
     let x2, y2;
     const arr2 = [];
@@ -41,9 +41,9 @@ function Drawing({nameSkills}) {
     return (
         <div>
             <svg viewBox='0 0 1100 1100' width='1100' heigth='1100' >
-                <circle className='circle1' cx={700} cy={400} r={150} strokeWidth="3" strokeOpacity='0.6' style={styleCirc} />
+                <circle className='circle1' cx={700} cy={400} r={140} strokeWidth="3" strokeOpacity='0.6' style={styleCirc} />
                 {arr1}
-                <circle  className='circle2' cx={700} cy={400} r={300} strokeWidth="3" strokeOpacity='0.6' style={styleCirc} />
+                <circle  className='circle2' cx={700} cy={400} r={285} strokeWidth="3" strokeOpacity='0.6' style={styleCirc} />
                 {arr2}
             </svg>
         </div>
