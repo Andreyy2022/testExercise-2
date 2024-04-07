@@ -14,8 +14,8 @@ function Drawing({nameSkills}) {
     for(let i = Math.PI * 2; i > 0; i -= Math.PI * 2 / amountOfPoints1) {
         j1++;
         k1++;
-        x1 = 700 + r1 * Math.sin(i);
-        y1 = 400 + r1 * Math.cos(i);
+        x1 = 700 - r1 * Math.sin(i);
+        y1 = 400 - r1 * Math.cos(i);
         arr1.push(<>
             <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' fillOpacity='0.7' />
             <text className={'textOut' + j1} x={x1 + 45 * Math.sin(i) - 60} y={y1 + 45 * Math.cos(i)}>{nameSkills[k1].name}</text>
