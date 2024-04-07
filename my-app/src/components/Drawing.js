@@ -18,7 +18,7 @@ function Drawing({nameSkills}) {
         y1 = 400 - r1 * Math.cos(i);
         arr1.push(<>
             <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' fillOpacity='0.7' />
-            <text className={'textOut' + j1} x={x1 + 45 * Math.sin(i) - 60} y={y1 + 45 * Math.cos(i)}>{nameSkills[k1].name}</text>
+            <text className={'textOut' + j1} x={700 - 250 * Math.sin(i) + 45 * Math.sin(i) - 60} y={400 - 250 * Math.cos(i) + 45 * Math.cos(i)}>{nameSkills[k1].name}</text>
         </>);
     }
 
