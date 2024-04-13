@@ -20,6 +20,7 @@ function Drawing({nameSkills}) {
     for(let i = Math.PI * 2; i > 0; i -= Math.PI * 2 / amountOfPoints1) {
         j1++;
         k1++;
+
         x1 = 700 - r1 * Math.sin(i);
         y1 = 400 - r1 * Math.cos(i);
         arr1.push(<>
@@ -35,33 +36,37 @@ function Drawing({nameSkills}) {
     const arr2 = [];
     let j2 = 0;
     let k2 = -1;
-//    let a = 0;
+    let a = 0;
+    let b = 0;
+    let c = 0;
     for(let i = Math.PI * 2; i > 0; i -= Math.PI * 2 / amountOfPoints2) {
         j2++;
         k2++;
-//        nameSkills[k2] ? a++ : a;
+        !nameSkills[a].mainSkills[b] ? b : b++;
+        !nameSkills[a].otherSkills[c] ? (c = 0, b = 0) : c++;
+        !nameSkills[a] ? a++ : a = 0;
+
         x2 = 700 - r2 * Math.sin(i);
         y2 = 400 - r2 * Math.cos(i);
         arr2.push(<>
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={13} fill='orange' fillOpacity='0.6' />
             <text className={'textOut' + j2} x={700 - 380 * Math.sin(i) + 50 * Math.sin(i) - 17} 
-             y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{'text' + k2 /*outCircleText()*/}</text>    
+             y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{/*'text' + k2*/ outCircleText()}</text>    
         </>
         );
     }
-/*
-    function outCircleText() {
-        nameSkills.map(function(obj) {
-            if (obj.mainSkills[j2]) {
-                return obj.mainSkills[j2]
 
-                } else if (obj.otherSkills[a]) {
-                    return obj.otherSkills[a];
+    function outCircleText() {
+        
+        if (nameSkills[a].mainSkills[b]) {
+            return nameSkills[a].mainSkills[b];
+
+            } else if (nameSkills[a].otherSkills[a]) {
+                return nameSkills[a].otherSkills[a];
                 }
-            }
-        );
     }
-*/
+
+
     return (
         <div>
             <svg viewBox='0 0 1100 1100' width='1100' heigth='1100' >
