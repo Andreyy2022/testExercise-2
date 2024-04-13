@@ -1,4 +1,4 @@
-import Drawing from './components/Drawing';
+import Drawing from "./components/Drawing.1";
 import './App.css';
 
 const nameSkills = [

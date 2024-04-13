@@ -42,30 +42,20 @@ function Drawing({nameSkills}) {
     for(let i = Math.PI * 2; i > 0; i -= Math.PI * 2 / amountOfPoints2) {
         j2++;
         k2++;
-        !nameSkills[a].mainSkills[b] ? b : b++;
-        !nameSkills[a].otherSkills[c] ? (c = 0, b = 0) : c++;
-        !nameSkills[a] ? a++ : a = 0;
+        !nameSkills[a].mainSkills[b] ? null : b++;
+        !nameSkills[a].otherSkills[c] ? a++ : c++;
 
         x2 = 700 - r2 * Math.sin(i);
         y2 = 400 - r2 * Math.cos(i);
         arr2.push(<>
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={13} fill='orange' fillOpacity='0.6' />
             <text className={'textOut' + j2} x={700 - 380 * Math.sin(i) + 50 * Math.sin(i) - 17} 
-             y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{/*'text' + k2*/ outCircleText()}</text>    
+             y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{
+                (nameSkills[a].mainSkills[b]) ? nameSkills[a].mainSkills[b] : ( (nameSkills[a].otherSkills[c]) ? nameSkills[a].otherSkills[c] : (c = 0, b = 0) )        
+                }</text>    
         </>
         );
     }
-
-    function outCircleText() {
-        
-        if (nameSkills[a].mainSkills[b]) {
-            return nameSkills[a].mainSkills[b];
-
-            } else if (nameSkills[a].otherSkills[a]) {
-                return nameSkills[a].otherSkills[a];
-                }
-    }
-
 
     return (
         <div>
