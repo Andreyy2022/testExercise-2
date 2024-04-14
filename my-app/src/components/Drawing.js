@@ -31,7 +31,7 @@ function Drawing({nameSkills}) {
     }
 
     const r2 = 285; 
-    const amountOfPoints2 = 29; 
+    const amountOfPoints2 = 33; 
     let x2, y2;
     const arr2 = [];
     let j2 = 0;
@@ -48,22 +48,22 @@ function Drawing({nameSkills}) {
         arr2.push(<>
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={13} fill='orange' fillOpacity='0.6' />
             <text className={'textOut' + j2} x={700 - 380 * Math.sin(i) + 50 * Math.sin(i) - 17} 
-             y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{
-                (nameSkills[a].mainSkills[b]) ? nameSkills[a].mainSkills[b] : 
-                    ( (nameSkills[a].otherSkills[c]) ? nameSkills[a].otherSkills[c] : 'trying to resolve ...' )        
-                }</text>    
+                y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>
+                    {
+                    (nameSkills[a].mainSkills[b]) ? nameSkills[a].mainSkills[b] : 
+                        ( (nameSkills[a].otherSkills[c]) ? nameSkills[a].otherSkills[c] : nameSkills[a+1].mainSkills[0] )        
+                    }
+            </text>    
         </>
         );
 
         if (nameSkills[a].mainSkills[b]) {
             b++;
-            console.log(b);
             } else if (nameSkills[a].otherSkills[c]) {
                 c++;
-                console.log(c);
             } else {
                 a++;
-                b = 0;
+                b = 1;
                 c = 0;
             }
     }
