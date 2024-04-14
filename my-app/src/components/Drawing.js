@@ -49,7 +49,8 @@ function Drawing({nameSkills}) {
             <circle className={'littleOutCircle' + j2} key={i} cx={x2} cy={y2} r={13} fill='orange' fillOpacity='0.6' />
             <text className={'textOut' + j2} x={700 - 380 * Math.sin(i) + 50 * Math.sin(i) - 17} 
              y={400 - 380 * Math.cos(i) + 50 * Math.cos(i)}>{
-                (nameSkills[a].mainSkills[b]) ? nameSkills[a].mainSkills[b] : ( (nameSkills[a].otherSkills[c]) ? nameSkills[a].otherSkills[c] : (a = 0, c = 0, b = 0) )        
+                (nameSkills[a].mainSkills[b]) ? nameSkills[a].mainSkills[b] : 
+                    ( (nameSkills[a].otherSkills[c]) ? nameSkills[a].otherSkills[c] : 'trying to resolve ...' )        
                 }</text>    
         </>
         );
@@ -57,13 +58,14 @@ function Drawing({nameSkills}) {
         if (nameSkills[a].mainSkills[b]) {
             b++;
             console.log(b);
-        }
-        if (nameSkills[a].otherSkills[c]) {
-            c++;
-            console.log(c);
-        }
-        console.log(nameSkills[a].mainSkills[b]);
-        console.log(b);
+            } else if (nameSkills[a].otherSkills[c]) {
+                c++;
+                console.log(c);
+            } else {
+                a++;
+                b = 0;
+                c = 0;
+            }
     }
 
     return (
