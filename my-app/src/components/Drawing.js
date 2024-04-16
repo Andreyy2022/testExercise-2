@@ -6,9 +6,9 @@ function Drawing({nameSkills}) {
     }
 /*
     const styleTextIn = {
-        display: 'block',
-        width: '20px',
+        width: '70px',
         wordWrap: 'break-word',
+        color: 'red',
     }
 */
     const r1 = 140; 
@@ -76,6 +76,7 @@ function Drawing({nameSkills}) {
                 <circle  className='circle2' cx={700} cy={400} r={285} strokeWidth="3" strokeOpacity='0.6' style={styleCirc} />
                 {arr2}
             </svg>
+            {console.log(nameSkills[0].name)}
         </div>
     );
 }

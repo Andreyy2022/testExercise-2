@@ -3,7 +3,7 @@ import './App.css';
 
 const nameSkills = [
   {
-    name: "Финансовый аналитик",
+    name: "Финансовый \n аналитик",
     mainSkills: ["Excel", "SQL", "VBA", "1С"],
     otherSkills: ["Power BI", "Python"],
   },
