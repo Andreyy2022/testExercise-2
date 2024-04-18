@@ -3,12 +3,12 @@ import './App.css';
 
 const nameSkills = [
   {
-    name: "Финансовый \n аналитик",
+    name: ['Финансовый', 'аналитик'],
     mainSkills: ["Excel", "SQL", "VBA", "1С"],
     otherSkills: ["Power BI", "Python"],
   },
   {
-    name: "Предприниматель",
+    name: ["Предприниматель"],
     mainSkills: ["1C", "Excel", "Power BI"],
     otherSkills: [
       "Google Analytics",
@@ -19,7 +19,7 @@ const nameSkills = [
     ],
   },
   {
-    name: "Продуктовый дизайнер",
+    name: ["Продуктовый дизайнер"],
     mainSkills: [
       "Figma",
       "Sketch",
@@ -31,7 +31,7 @@ const nameSkills = [
     otherSkills: ["Shopify", "Protopie", "Cinema 4D"],
   },
   {
-    name: "Менеджер проекта",
+    name: ["Менеджер проекта"],
     mainSkills: [
       "Visio",
       "1C",
@@ -44,7 +44,7 @@ const nameSkills = [
     otherSkills: ["Figma", "Sketch", "Shopify"],
   },
   {
-    name: "Финансовый менеджер",
+    name: ["Финансовый менеджер"],
     mainSkills: ["1C", "Excel", "Power BI"],
     otherSkills: ["BPMN"],
   },
@@ -55,7 +55,7 @@ const nameSkills = [
   },
 
   {
-    name: "Продуктовый аналитик",
+    name: ["Продуктовый аналитик"],
     mainSkills: [
       "Google Analytics",
       "Яндекс.Метрика",
@@ -68,12 +68,12 @@ const nameSkills = [
   },
 
   {
-    name: "Руководитель финансового продукта",
+    name: ["Руководитель финансового продукта"],
     mainSkills: ["Visio"],
     otherSkills: ["Python"],
   },
   {
-    name: "Менеджер по маркетингу",
+    name: ["Менеджер по маркетингу"],
     mainSkills: [
       "Google Analytics",
       "Яндекс.Метрика",
@@ -86,7 +86,7 @@ const nameSkills = [
   },
 
   {
-    name: "Менеджер по цифровой трансформации",
+    name: ["Менеджер по цифровой трансформации"],
     mainSkills: [
       "Visio",
       "Google Analytics",
