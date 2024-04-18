@@ -26,10 +26,10 @@ function Drawing({nameSkills}) {
         arr1.push(<>
             <circle className={'littleInCircle' + j1} key={i} cx={x1} cy={y1} r={13} fill='grey' fillOpacity='0.7' />
             <text className={'textOut' + j1} x={700 - 250 * Math.sin(i) + 45 * Math.sin(i) - 60}
-             y={400 - 250 * Math.cos(i) + 45 * Math.cos(i)} /*style={styleTextIn}*/>{nameArr(nameSkills[k1].name)}</text>
+             y={400 - 250 * Math.cos(i) + 45 * Math.cos(i)} /*style={styleTextIn}*/>{nameSkills[k1].name}</text>
         </>);
     }
-
+/*
     function nameArr(arr) {
         return <ul>
             {arr.map(elem => (
@@ -37,7 +37,7 @@ function Drawing({nameSkills}) {
             ))}
         </ul>;
     }
-
+*/
     const r2 = 285; 
     const amountOfPoints2 = 33; 
     let x2, y2;
